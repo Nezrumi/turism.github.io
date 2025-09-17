@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+ content="width=device-width, initial-scale=1.0">
+  <title>Туризм</title>
+  <style>
+body {
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f5f5f5;
+color: #333;
+}
+.header {
+background-color: #007BFF;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 30px;
+}
+.header .title {
+font-size: 24px;
+font-weight: bold;
+}
+.header .phone {
+font-size: 18px;
+}
+.hero-image {
+width: 100%;
+height: 300px;
+background: url('https://source.unsplash.com/1600x400/?nature,tourism') no-repeat center center/cover;
+}
+.main-info {
+padding: 30px;
+font-size: 18px;
+line-height: 1.6;
+text-align: center;
+font-weight: 500;
+}
+.city-select {
+text-align: center;
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+.cities {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 20px;
+padding: 0 30px 50px 30px;
+}
+.city {
+background-color: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+transition: transform 0.2s;
+}
+.city:hover {
+transform: scale(1.03);
+}
+.city img {
+width: 100%;
+height: 120px;
+object-fit: cover;
+}
+.city-name {
+padding: 10px;
+font-weight: bold;
+}
+@media (max-width: 900px) {
+.cities {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+  </style>
+</head>
+<body>
+<div class="header">
+<div class="phone">+7 (777) 123-45-67</div>
+<div class="title">Туризм</div>
+<div style="width: 150px;"></div>
+</div>
+<img style="width: 100%; height: 400px;" alt="да"
+ src="Images/Glav.jpg">
+<div style="margin: 20px; text-align: center;"><input
+ list="countriesList" id="searchBox"
+ placeholder="Введите страну..."
+ style="padding: 10px; width: 300px; font-size: 16px;"
+ type="text"><datalist id="countriesList">
+	<option value="Турция">
+        <option value="Египет">
+        <option value="ОАЭ">
+        <option value="Объединенные Арабские Эмираты">
+        <option value="Вьетнам">
+        <option value="Франция">
+        <option value="Таиланд">
+        <option value="Китай">
+        <option value="Индия">
+        <option value="Грузия">
+        <option value="Мальдивы">
+	<option value="Япония">
+	<option value="Германия">
+	<option value="Испания">
+	<option value="Англия">
+	<option value="Америка">
+	<option value="Австралия">
+	<option value="Италия">
+	<option value="Канада">
+	<option value="Швейцария">
+	<option value="Гонконг">
+</datalist><button
+ onclick="searchCountry()"
+ style="border: medium none ; padding: 10px 20px; font-size: 16px; background-color: rgb(0, 123, 255); color: white;">Искать
+</button>
+</div>
+<div class="main-info" id="info-block"><font
+ size="+1">Ни для кого не секрет, что люди любят отдыхать в
+других странах,
+особенно в период каникул и отпусков. Многие беспечно едут отдыхать,
+даже не задумываясь о том, что их там поджидает. В первую очередь,
+перед тем как ехать в другую страну, нужно знать: далекая страна – это
+как другая планета, со своей флорой, фауной, климатом и болезнями.<br>
+</font><font size="+1"><span
+ style="font-style: italic; font-weight: bold;">Поэтому мы
+поможем вам избежать рисков заболевания в других странах</span></font>
+</div>
+<div class="city-select">Выберите город, в который
+собираетесь отправиться:</div>
+<div class="cities">
+<div class="city"><a href="Counrties/Turkey.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Turkey.jpeg" alt="Турция"></a>
+<div class="city-name"><a href="Counrties/Turkey.html">Турция</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Egypt.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Egypt.jpg" alt="Египет"></a>
+<div class="city-name"><a href="Counrties/Egypt.html">Египет</a></div>
+</div>
+<div class="city">
+<a href="Counrties/OAE.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/OAE.jpeg" alt="Париж"></a>
+<div class="city-name"><a href="Counrties/OAE.html">Обьединенные
+Арабские Эмираты</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Vethnam.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Vieham.jpeg" alt="Рим"></a>
+<div class="city-name"><a href="Counrties/Vethnam.html">Вьетнам</a></div>
+</div>
+<div class="city">
+<a href="Counrties/France.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/France.jpeg" alt="Франция"></a>
+<div class="city-name"><a href="Counrties/France.html">Франция</a><br>
+</div>
+</div>
+<div class="city">
+<a href="Counrties/Tailand.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Tailand.jpeg" alt="Тайланд"></a>
+<div class="city-name"><a href="Counrties/Tailand.html">Тайланд</a></div>
+</div>
+<div class="city">
+<a href="Counrties/China.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/China.jpeg" alt="Китай"></a>
+<div class="city-name"><a href="Counrties/China.html">Китай</a></div>
+</div>
+<div class="city">
+<a href="Counrties/India.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/India.jpeg" alt="Индия"></a>
+<div class="city-name"><a href="Counrties/India.html">Индия</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Gruzia.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Gruzia.jpeg" alt="Грузия"></a>
+<div class="city-name"><a href="Counrties/Gruzia.html">Грузия</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Maldivi.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Maldivi.jpeg" alt="Мальдивы"></a>
+<div class="city-name"><a href="Counrties/Maldivi.html">Мальдивы</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Spain.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Spain.jpeg" alt="Египет"></a>
+<div class="city-name"><a href="Counrties/Spain.html">Испания</a></div>
+</div>
+<div class="city">
+<a href="Counrties/german.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/german.jpeg" alt="Париж"></a>
+<div class="city-name"><a href="Counrties/german.html">Германия</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Japan.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/japan.jpeg" alt="Рим"></a>
+<div class="city-name"><a href="Counrties/Japan.html">Япония</a></div>
+</div>
+<div class="city">
+<a href="Counrties/England.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/England.jpeg" alt="Франция"></a>
+<div class="city-name"><a href="Counrties/England.html">Англия</a><br>
+</div>
+</div>
+<div class="city">
+<a href="Counrties/America.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/America.jpeg" alt="Тайланд"></a>
+<div class="city-name"><a href="Counrties/America.html">Америка</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Avstralia.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Avstralia.jpeg" alt="Китай"></a>
+<div class="city-name"><a
+ href="Counrties/Avstralia.html">Австралия</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Italy.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Italy.jpeg" alt="Индия"></a>
+<div class="city-name"><a href="Counrties/Italy.html">Италия</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Canada.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Canada.jpeg" alt="Грузия"></a>
+<div class="city-name"><a href="Counrties/Canada.html">Канада</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Switzerland.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Switzerland.jpeg" alt="Мальдивы"></a>
+<div class="city-name"><a
+ href="Counrties/Switzerland.html">Швейцария</a></div>
+</div>
+<div class="city">
+<a href="Counrties/Hongkong.html"><img
+ style="border: 0px solid ; width: 355px; height: 277px;"
+ src="Images/Hong%20Kong.jpeg" alt="Египет"></a>
+<div class="city-name"><a href="Counrties/Hongkong.html">Гонконг</a></div>
+</div>
+</div>
+<script>
+function searchCountry() {
+let input = document.getElementById("searchBox").value.trim().toLowerCase();
+// Список стран и файлов
+let countries = {
+"турция": "Turkey.html",
+"египет": "Egypt.html",
+"оаэ": "OAE.html",
+"объединенные арабские эмираты": "OAE.html",
+"вьетнам": "Vethnam.html",
+"франция": "France.html",
+"тайланд": "Tailand.html",
+"таиланд": "Tailand.html",
+"китай": "China.html",
+"индия": "India.html",
+"грузия": "Gruzia.html",
+"мальдивы": "Maldivi.html"
+};
+if (countries[input]) {
+window.location.href = countries[input];
+} else {
+alert("Страна не найдена. Попробуйте другое название.");
+}
+}
+</script>
+</body>
+</html>
